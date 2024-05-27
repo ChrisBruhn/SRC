@@ -1,17 +1,17 @@
 
 
-File rpc26 = new File("rpc2-6.csv");
-File rpc45 = new File("rpc4-5.csv");
-File rpc85 = new File("rpc8-5.csv");
+File rcp26 = new File("rcp2-6.csv");
+File rcp45 = new File("rcp4-5.csv");
+File rcp85 = new File("rcp8-5.csv");
 //File rpc26 = new File("testFile.csv");
 
 
 
 void setup() {
   size(1400, 600);
-  rpc26.loadFile();
-  rpc45.loadFile();
-  rpc85.loadFile();
+  rcp26.loadFile();
+  rcp45.loadFile();
+  rcp85.loadFile();
 }
 
 void draw() {
@@ -29,7 +29,7 @@ void drawGraph25(int year, int modelNo, int noOfYears) {
 
   for (int i=0; i<noOfYears; i++) {
     // hent data for det valgte år og model
-    float y=(float)rpc26.getDataYearModelNo(String.valueOf(i+year), modelNo);
+    float y=(float)rcp26.getDataYearModelNo(String.valueOf(i+year), modelNo);
     
    // jeg forstærker værdien ved at gange med 10
     line(50+i*10, 400, 50+i*10, 400-(y*10) );
